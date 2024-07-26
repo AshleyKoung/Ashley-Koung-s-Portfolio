@@ -1,0 +1,159 @@
+/* reset */
+body, h1, ul, li {
+    margin: 0;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  ul {
+    list-style: none; 
+    padding-left: 0; 
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  /* NavBar */
+  nav {
+    background-color: rgb(252, 249, 235);
+    box-shadow: 0px 1px 3px ;
+    &::after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+    h1 {
+      float: left;
+      position: relative;
+      padding-left: 120px;
+      line-height: 50px;
+      color: black;
+    }
+  }
+  /* 隱藏 checkbox */
+  input {
+    display: none;
+  }
+  
+  /* 漢堡按鈕 */
+  label {
+    float: right;
+    padding-right: 50px;
+    line-height: 50px;
+    cursor: pointer;
+    img {
+      width: 30px;   
+      vertical-align: middle;
+    }
+  }
+  
+  /* menu*/
+  .menu {
+    clear: both;
+    background: rgb(250, 244, 216);
+    li {
+      text-align: center;
+      border-bottom: 1px solid rgb(252, 249, 235);
+      a {
+        display: block;
+        line-height: 50px;
+        font-size: 18px;
+        color: black;
+        &:hover {
+          background: black;
+          color: rgb(250, 244, 216);
+        }
+      }
+    }
+  }
+  
+  /* 下拉選單效果 */
+  .menu {
+    max-height: 0;
+    overflow: hidden;
+    transition: .2s; /* 動畫秒數 */
+  }
+  
+  input:checked ~ .menu {
+    max-height: 300px;
+  }
+
+.mainbanner {
+    background-color:rgb(254, 254, 241) ;
+    color:rgb(254, 254, 241);
+    height:100vh;
+    background-image: url("images/banner.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items:normal;
+    padding-left: 120px;
+    padding-top: 50px;
+    font-family: serif;
+}
+
+.mainbanner h2{
+    font-size: 40px;
+    margin: 25px 0;
+    font-family: serif;
+}
+
+.mainbanner a {
+    color: black;
+    text-decoration: none;
+    border: 1px solid rgb(254, 254, 241);
+    padding:10px 20px;
+    border-radius: 40px;
+    background-color: rgb(254, 254, 241);
+    font-family: serif;
+}
+
+.mainbanner a:hover{
+    text-decoration: underline;
+}
+
+
+
+/* 響應式設計語法 */
+@media screen  and (min-width: 768px) {
+
+    label {
+        display: none;
+      }
+      .menu {
+        float: right;
+        clear: none;
+        max-height: 50px;
+        background: rgb(252, 249, 235);
+        li {
+          display: inline-block;
+          a {
+            padding: 0 15px;  
+          }
+        }
+      }
+
+    h1{
+        color: black;
+      }
+        a{
+            color: black;
+        }
+
+    
+    .mainbanner{
+        display: flex;
+        flex-direction: column;
+        justify-content:baseline;
+    }
+
+    .mainbanner h2{
+        font-size: 60px;
+    }
+
+}
